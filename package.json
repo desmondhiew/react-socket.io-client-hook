@@ -1,7 +1,7 @@
 {
   "private": false,
-  "name": "react-socket.io-client-hook",
-  "description": "An image cropper for Ant Design Upload using React Cropper.",
+  "name": "socket.io-client-react-hook",
+  "description": "React hooks using socket.io-client v2.3.0",
   "license": "MIT",
   "keywords": [
     "react",
@@ -10,12 +10,13 @@
     "client",
     "socket.io-client",
     "websocket",
-    "realtime"
+    "realtime",
+    "nestjs"
   ],
   "version": "0.1.0",
   "author": "desmondhiew <tamashizero00@gmail.com  > (https://github.com/desmondhiew)",
-  "homepage": "https://github.com/desmondhiew/react-socket.io-client-hook",
-  "repository": "github.com:desmondhiew/react-socket.io-client-hook.git",
+  "homepage": "https://github.com/desmondhiew/socket.io-client-react-hook",
+  "repository": "github.com:desmondhiew/socket.io-client-react-hook.git",
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",

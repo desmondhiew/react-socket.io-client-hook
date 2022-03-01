@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import io from "socket.io-client";
+import { SocketIOClient } from "./types";
 
 export const useSocketIoClient = (url: string, options?: SocketIOClient.ConnectOpts) => {
   const client = useRef<SocketIOClient.Socket>();

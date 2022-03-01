@@ -1,10 +1,10 @@
 import { useEffect, useState, useRef } from 'react';
-import useSocketClient from 'react-socket.io-client-hook';
+import useSocketClient from 'socket.io-client-react-hook';
 
 const wsUrl = 'ws://localhost:3000';
 
 const Index: React.FC = () => {
-  const room = `merchant-1-branch-1`;
+  const room = `chat-room-001`;
   const chatsRef = useRef([]);
   const [chats, setChats] = useState([]);
   const { client, connected } = useSocketClient(wsUrl, {
@@ -12,15 +12,15 @@ const Index: React.FC = () => {
   });
 
   useEffect(() => {
-    if (connected && client) client.emit('joinRoom', room);
+    if (connected && client) client.emit('join-room', room);
     return () => {
-      if (client) client.emit('leaveRoom', room);
+      if (client) client.emit('leave-room', room);
     };
   }, [connected, client]);
 
   useEffect(() => {
     if (!client) return;
-    client.on('event:order_created', (val: any) => {
+    client.on('event:message_received', (val: any) => {
       onChatReceived(val || 'new message');
     });
   }, [client]);
