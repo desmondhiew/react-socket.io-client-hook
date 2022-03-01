@@ -13,7 +13,7 @@
     "realtime",
     "nestjs"
   ],
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "desmondhiew <tamashizero00@gmail.com  > (https://github.com/desmondhiew)",
   "homepage": "https://github.com/desmondhiew/socket.io-client-react-hook",
   "repository": "github.com:desmondhiew/socket.io-client-react-hook.git",
